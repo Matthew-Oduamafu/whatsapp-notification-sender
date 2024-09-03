@@ -1,0 +1,19 @@
+﻿version: '3.7'
+
+services:
+  rabbitmq:
+    image: rabbitmq:3-management-alpine
+    container_name: rabbitmq-default
+    ports:
+      - "5672:5672"  # AMQP port
+      - "15672:15672"  # Management UI port
+    environment:
+      RABBITMQ_DEFAULT_USER: guest
+      RABBITMQ_DEFAULT_PASS: guest
+      
+    
+  whatsappnotificationworker:
+    image: whatsappnotificationworker
+    build:
+      context: .
+      dockerfile: WhatsAppNotificationWorker/Dockerfile

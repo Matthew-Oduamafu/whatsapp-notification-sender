@@ -1,0 +1,27 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WhatsAppNotificationApi", "WhatsAppNotificationApi\WhatsAppNotificationApi.csproj", "{B3EC8C08-0EAA-45A8-9FCC-2104EACA431F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{034F70F2-6BC2-498F-B5B9-2F393623C33B}"
+	ProjectSection(SolutionItems) = preProject
+		docker-compose.yml = docker-compose.yml
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WhatsAppNotificationWorker", "WhatsAppNotificationWorker\WhatsAppNotificationWorker.csproj", "{04648B2B-3546-4A31-BA79-75A7E262F9A3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B3EC8C08-0EAA-45A8-9FCC-2104EACA431F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B3EC8C08-0EAA-45A8-9FCC-2104EACA431F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B3EC8C08-0EAA-45A8-9FCC-2104EACA431F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B3EC8C08-0EAA-45A8-9FCC-2104EACA431F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{04648B2B-3546-4A31-BA79-75A7E262F9A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{04648B2B-3546-4A31-BA79-75A7E262F9A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{04648B2B-3546-4A31-BA79-75A7E262F9A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{04648B2B-3546-4A31-BA79-75A7E262F9A3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

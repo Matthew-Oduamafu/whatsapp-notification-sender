@@ -53,5 +53,53 @@ The architecture consists of the following components:
 ### Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/WhatsAppNotificationService.git
+git clone https://github.com/Matthew-Oduamafu/whatsapp-notification-sender.git
 cd WhatsAppPushNotification
+```
+
+### Configure Environment Variables
+Update the `appsettings.json` file in both the API and Worker projects with the following configurations:
+```json
+{
+  "TwilioConfig": {
+    "AccountSid": "ACXXXXXXXX", // Twilio Account SID
+    "AuthToken": "your_auth_token",  // Twilio Auth Token
+    "PhoneNumber": "your_twilio_phone_number" // Twilio Phone Number
+  },
+  "RabbitMqConfig": {
+    "Host": "localhost",
+    "QueueName": "WhatsappNotificationQueue"
+  }
+}
+```
+
+### Install Required Packages
+Run the following commands in both the `WhatsAppNotificationApi` and `WhatsAppNotificationWorker` directories:
+```bash
+dotnet add package RabbitMQ.Client
+dotnet add package Twilio
+dotnet add package OpenTelemetry.Extensions.Hosting
+dotnet add package OpenTelemetry.Instrumentation.AspNetCore
+dotnet add package OpenTelemetry.Exporter.Console
+```
+
+### Run RabbitMQ Locally (Docker)
+Set up a RabbitMQ container using Docker from the docker-compose file in the root directory:
+```bash
+docker-compose up -d
+```
+
+## Running the Project
+1. Run the API Project
+
+   Navigate to the WhatsAppNotificationApi directory and run:
+```bash
+dotnet run
+```
+2. Run the Worker Service
+
+   Navigate to the WhatsAppNotificationWorker directory and run:
+
+```bash
+dotnet run
+```
